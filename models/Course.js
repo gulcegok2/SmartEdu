@@ -31,10 +31,10 @@ const CourseSchema = new Schema({
   },
 });
 
-CourseSchema.pre('validate', function(next) {
-  this.slug = slugify(this.name, { 
-    lower: true, 
-    strict: true 
+CourseSchema.pre('validate', function (next) {
+  this.slug = slugify(this.name, {
+    lower: true,
+    strict: true,
   });
   next();
 });

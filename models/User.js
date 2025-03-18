@@ -32,24 +32,20 @@ const UserSchema = new Schema({
 
 //Middleware
 //Hash password before saving to DB
-UserSchema.pre('save', function(next) {
+UserSchema.pre('save', function (next) {
   const user = this;
-  if(!user.isModified('password')) return next();
+  if (!user.isModified('password')) return next();
 
   bcrypt.genSalt(10, (error, salt) => {
-    if(error) return next(error);
+    if (error) return next(error);
 
     bcrypt.hash(user.password, salt, (error, hash) => {
-      if(error) return next(error);
+      if (error) return next(error);
       user.password = hash;
       next();
     });
   });
-  
 });
-
-
-
 
 const User = mongoose.model('User', UserSchema);
 module.exports = User;
