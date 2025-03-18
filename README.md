@@ -1,43 +1,42 @@
-# SmartEDU Eğitim Portalı
+# SmartEDU Education Portal
 
-## Proje Hakkında
-SmartEDU, öğrenciler ve eğitmenler arasında etkileşimi kolaylaştıran bir eğitim portalıdır. Platform, kullanıcılara çeşitli kurslar sunarak online eğitim deneyimini zenginleştirmeyi amaçlamaktadır.
+## About the Project  
+SmartEDU is an education portal that facilitates interaction between students and instructors. The platform aims to enhance the online learning experience by offering various courses to users.  
 
-## Özellikler
+## Features  
 
-### Kullanıcı Rolleri
-- **Öğrenciler**: Kursları inceleyebilir, kayıt olabilir ve kendi dashboard'larından takip edebilirler
-- **Eğitmenler**: Kurs oluşturabilir, düzenleyebilir ve yönetebilirler
-- **Adminler**: Tüm kullanıcıları ve kategorileri yönetebilirler
+### User Roles  
+- **Students**: Can browse, enroll in, and track courses from their dashboard.  
+- **Instructors**: Can create, edit, and manage courses.  
+- **Admins**: Can manage all users and categories.  
 
-### Kurs Yönetimi
-- Kurs oluşturma ve güncelleme
-- Kategorilere göre kursları filtreleme
-- Kurs arama fonksiyonu
-- Kursa kayıt olma ve kurstan ayrılma
+### Course Management  
+- Course creation and updating  
+- Filtering courses by categories  
+- Course search function  
+- Enrolling in and unenrolling from courses  
 
-### Kullanıcı İşlemleri
-- Kullanıcı kaydı ve girişi
-- Rol bazlı yetkilendirme
-- Güvenli şifre saklama
+### User Operations  
+- User registration and login  
+- Role-based authorization  
+- Secure password storage  
 
-## Teknolojiler
+## Technologies  
 
-### Backend
-- Node.js
-- Express.js
-- MongoDB (Mongoose)
-- bcrypt (şifre hashleme)
-- express-validator (form validasyonu)
-- express-session (oturum yönetimi)
-- connect-flash (bildirim mesajları)
-- method-override (HTTP metot desteği)
-- nodemailer (e-posta gönderimi)
-- slugify (SEO dostu URL'ler)
+### Backend  
+- Node.js  
+- Express.js  
+- MongoDB (Mongoose)  
+- bcrypt (password hashing)  
+- express-validator (form validation)  
+- express-session (session management)  
+- connect-flash (notification messages)  
+- method-override (HTTP method support)  
+- nodemailer (email sending)  
+- slugify (SEO-friendly URLs)  
 
-### Frontend
-- EJS (Template Engine)
-- Bootstrap
-- jQuery
+### Frontend  
+- EJS (Template Engine)  
+- Bootstrap  
+- jQuery  
 - HTML/CSS
-
