@@ -16,16 +16,36 @@ const UserSchema = new Schema({
     type: String,
     required: true,
   },
+  role: {
+    type: String,
+    enum: ['student', 'instructor', 'admin'],
+    default: 'student',
+  },
+  //öğrencinin aldığı kurslar listesi
+  courses: [
+    {
+      type: mongoose.Schema.Types.ObjectId,
+      ref: 'Course',
+    },
+  ],
 });
 
 //Middleware
 //Hash password before saving to DB
 UserSchema.pre('save', function(next) {
   const user = this;
-  bcrypt.hash(user.password, 10, (error, hash) => {
-    user.password = hash;
-    next();
+  if(!user.isModified('password')) return next();
+
+  bcrypt.genSalt(10, (error, salt) => {
+    if(error) return next(error);
+
+    bcrypt.hash(user.password, salt, (error, hash) => {
+      if(error) return next(error);
+      user.password = hash;
+      next();
+    });
   });
+  
 });
 
 
